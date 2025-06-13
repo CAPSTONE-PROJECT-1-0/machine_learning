@@ -4,8 +4,6 @@ Klasifikasi gambar makanan menggunakan **Transfer Learning** dengan arsitektur *
 
 ## 🚀 Fitur Utama
 - Menggunakan pretrained **MobileNetV2** sebagai feature extractor
-- Fine-tuning pada dataset lokal makanan
-- Input gambar 64x64 (RGB)
 - Output: Label kategori makanan (multi-class classification), Keseimbangan gizi makanan
 - Model disimpan dan bisa digunakan ulang untuk prediksi gambar baru
 
