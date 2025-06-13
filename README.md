@@ -25,5 +25,3 @@ Deteksi jenis makanan dari gambar menggunakan Convolutional Neural Network (CNN)
 - TensorFlow / Keras
 - Matplotlib
 - NumPy
-
-## 📁 Struktur Project
