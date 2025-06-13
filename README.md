@@ -1,27 +1,31 @@
-# **machine_learning**
+# 🍔 Food Image Classification with MobileNetV2
 
+Klasifikasi gambar makanan menggunakan **Transfer Learning** dengan arsitektur **MobileNetV2**.
 
-# 🍱 Food Classification with CNN
-
-Deteksi jenis makanan dari gambar menggunakan Convolutional Neural Network (CNN). Proyek ini dikembangkan untuk mengklasifikasikan gambar makanan ke dalam beberapa kategori menggunakan deep learning.
-
-## 🔍 Ringkasan
-- Input: Gambar makanan (ukuran 64x64 piksel, 3 channel RGB)
-- Output: Label kategori makanan (contoh: nasi goreng, ayam goreng, rendang, dll)
-- Model: CNN menggunakan Keras Sequential API
-- Dataset: Terstruktur dalam folder `train/` dan `test/` dengan subfolder untuk tiap kelas
+## 🚀 Fitur Utama
+- Menggunakan pretrained **MobileNetV2** sebagai feature extractor
+- Fine-tuning pada dataset lokal makanan
+- Input gambar 64x64 (RGB)
+- Output: Label kategori makanan (multi-class classification)
+- Model disimpan dan bisa digunakan ulang untuk prediksi gambar baru
 
 ## 🧠 Arsitektur Model
-- 2x Convolutional Layer (32 dan 64 filter) + ReLU + MaxPooling
-- Flatten → Dense 128 unit → Dropout 0.5
-- Output: Dense dengan softmax sesuai jumlah kelas makanan
+- Base model: `MobileNetV2` dari TensorFlow (tanpa top layers)
+- Layer tambahan (custom head):
+  - `GlobalAveragePooling2D`
+  - `Dense(128, activation='relu')`
+  - `Dropout(0.5)`
+  - `Dense(num_classes, activation='softmax')`
+- Loss function: `categorical_crossentropy`
+- Optimizer: `adam`
+- Metrics: `accuracy`
 
-## 📈 Evaluasi Model
-- Akurasi training & validasi divisualisasikan tiap epoch
-- Model diekspor ke file `.h5` untuk deployment
+## 🧪 Dataset
+- Folder `train/` dan `test/` berisi subfolder sesuai nama kelas makanan
+- Gambar otomatis di-preprocess dan diaugmentasi dengan `ImageDataGenerator`
+- Ukuran gambar: **64x64 px**
 
-## 🛠️ Tools & Library
-- Python
-- TensorFlow / Keras
-- Matplotlib
-- NumPy
+## 📈 Hasil Model
+- Model mencapai akurasi tinggi
+- Training & validation accuracy dan loss divisualisasikan
+- Model diekspor sebagai file `.h5`
