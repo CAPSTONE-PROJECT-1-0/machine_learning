@@ -6,19 +6,8 @@ Klasifikasi gambar makanan menggunakan **Transfer Learning** dengan arsitektur *
 - Menggunakan pretrained **MobileNetV2** sebagai feature extractor
 - Fine-tuning pada dataset lokal makanan
 - Input gambar 64x64 (RGB)
-- Output: Label kategori makanan (multi-class classification)
+- Output: Label kategori makanan (multi-class classification), Keseimbangan gizi makanan
 - Model disimpan dan bisa digunakan ulang untuk prediksi gambar baru
-
-## 🧠 Arsitektur Model
-- Base model: `MobileNetV2` dari TensorFlow (tanpa top layers)
-- Layer tambahan (custom head):
-  - `GlobalAveragePooling2D`
-  - `Dense(128, activation='relu')`
-  - `Dropout(0.5)`
-  - `Dense(num_classes, activation='softmax')`
-- Loss function: `categorical_crossentropy`
-- Optimizer: `adam`
-- Metrics: `accuracy`
 
 ## 🧪 Dataset
 - Folder `train/` dan `test/` berisi subfolder sesuai nama kelas makanan
