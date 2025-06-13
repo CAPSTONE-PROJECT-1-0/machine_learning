@@ -12,5 +12,5 @@ Klasifikasi gambar makanan menggunakan **Transfer Learning** dengan arsitektur *
 - Gambar otomatis di-preprocess dan diaugmentasi dengan `ImageDataGenerator`
 
 ## 📈 Hasil Model
-- Training & validation accuracy dan loss divisualisasikan
+- Menampilkan Confussion Matrix hasil gizi & jenis makanan
 - Model diekspor sebagai file `.h5`
