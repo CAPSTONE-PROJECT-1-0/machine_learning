@@ -10,9 +10,7 @@ Klasifikasi gambar makanan menggunakan **Transfer Learning** dengan arsitektur *
 ## 🧪 Dataset
 - Folder `train/` dan `test/` berisi subfolder sesuai nama kelas makanan
 - Gambar otomatis di-preprocess dan diaugmentasi dengan `ImageDataGenerator`
-- Ukuran gambar: **64x64 px**
 
 ## 📈 Hasil Model
-- Model mencapai akurasi tinggi
 - Training & validation accuracy dan loss divisualisasikan
 - Model diekspor sebagai file `.h5`
